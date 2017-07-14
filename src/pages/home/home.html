@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Leagues</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="let league of leagues" (click)="leagueTapped($event, league)">
+            <ion-thumbnail item-start>
+                <img src="{{league.thumbnail}}">
+            </ion-thumbnail>
+            <h2>{{league.caption}}</h2>
+        </button>
+    </ion-list>
+</ion-content>

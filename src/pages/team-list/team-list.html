@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Teams</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="let team of teams" (click)="itemTapped($event, team)">
+            <ion-thumbnail item-start>
+                <img src="{{team.crestUrl}}">
+            </ion-thumbnail>
+            <h2>{{team.name}}</h2>
+            <p>Short Name: {{team.shortName}}</p>
+            <p *ngIf="team.squadMarketValue">Market value: {{team.squadMarketValue}}</p>
+        </button>
+    </ion-list>
+</ion-content>
