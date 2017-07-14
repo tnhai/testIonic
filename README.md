@@ -24,3 +24,9 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+Documents:
+https://ionicframework.com/docs/components/#overview
+https://ionicframework.com/docs/api/components
+https://www.jokecamp.com/blog/guide-to-football-and-soccer-data-and-apis/#SportsOpenData
+http://www.football-data.org/documentation
+
