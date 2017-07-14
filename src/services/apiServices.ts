@@ -23,7 +23,7 @@ export class APIServices {
 
     async getLeagues(): Promise<any> {
         return await new Promise(resolve => {
-            this.http.get(Constants.LEAGUES, this.opt)
+            this.http.get(Constants.Leagues, this.opt)
                 .map(res => res.json().map(object => {
                     return new Season(
                         object.caption,
@@ -46,7 +46,7 @@ export class APIServices {
 
     async getTeams(id: number): Promise<any> {
         return await new Promise(resolve => {
-            this.http.get(Constants.TEAMS.replace(/{id}/, id.toString()), this.opt)
+            this.http.get(Constants.Teams.replace(/{id}/, id.toString()), this.opt)
                 .map(res => res.json().teams.map(object => {
                     return new Team(
                         object.code,
@@ -56,6 +56,17 @@ export class APIServices {
                         object.squadMarketValue
                     )
                 }))
+                .subscribe(data => {
+                    console.log(data);
+                    resolve(data);
+                })
+        })
+    }
+
+    async getTable(id: number): Promise<any> {
+        return await new Promise(resolve => {
+            this.http.get(Constants.Table.replace(/{id}/, id.toString()), this.opt)
+                .map(res => res.json())
                 .subscribe(data => {
                     console.log(data);
                     resolve(data);

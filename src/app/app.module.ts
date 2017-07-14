@@ -11,6 +11,8 @@ import { ListPage } from '../pages/list/list';
 import { PhotoListPage } from '../pages/photo-list/photo-list';
 import { HomePage } from '../pages/home/home';
 import { TeamListPage } from '../pages/team-list/team-list';
+import { LeaguePage } from '../pages/league/league';
+import { LeagueTablePage } from '../pages/league-table/league-table';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +28,10 @@ import { APIServices } from '../services/apiServices';
     HomePage,
     PhotoListPage,
     PhotoDetailsPage,
-    TeamListPage
+    TeamListPage,
+    LeaguePage,
+    TeamListPage,
+    LeagueTablePage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,10 @@ import { APIServices } from '../services/apiServices';
     HomePage,
     PhotoListPage,
     PhotoDetailsPage,
-    TeamListPage
+    TeamListPage,
+    LeaguePage,
+    TeamListPage,
+    LeagueTablePage
   ],
   providers: [
     StatusBar,

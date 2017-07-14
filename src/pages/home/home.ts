@@ -5,7 +5,7 @@ import { APIServices } from  '../../services/apiServices';
 
 import Season from  '../../models/impl/season';
 
-import { TeamListPage } from '../../pages/team-list/team-list';
+import { LeaguePage } from '../../pages/league/league';
 
 @Component({
   selector: 'page-home',
@@ -31,7 +31,7 @@ export class HomePage {
   }
 
   leagueTapped(event, league) {
-    this.navCtrl.push(TeamListPage, {
+    this.navCtrl.push(LeaguePage, {
       id: league.id
     });
   }

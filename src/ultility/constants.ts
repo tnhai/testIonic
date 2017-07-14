@@ -1,4 +1,11 @@
 export const API_ENDPOINT = "http://api.football-data.org/v1/";
-export const LEAGUES = API_ENDPOINT + "soccerseasons/";
-export const TEAMS = API_ENDPOINT + "competitions/{id}/teams";
+export const Leagues = API_ENDPOINT + "competitions/";
+export const Teams = API_ENDPOINT + "competitions/{id}/teams";
+export const Table = API_ENDPOINT + "competitions/{id}/leagueTable";
+export const CompetitionsFixtures = API_ENDPOINT + "competitions/{id}/fixtures";
+export const AllFixtures = API_ENDPOINT + "competitions/fixtures";
+export const OneFixtures = API_ENDPOINT + "competitions/fixtures/{id}";
+export const TeamFixtures = API_ENDPOINT + "teams/{id}/fixtures/";
+export const TEAM = API_ENDPOINT + "teams/{id}";
+export const Players = API_ENDPOINT + "teams/{id}/players";
 export const XAuthToken = "5dee0325ab0b47ea8011b471f2fcd524";
